@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR code generator</title>
+</head>
+<body>
+<h1>Welcome to QR Code Generator</h1>
+<form action="/qrcode" method="POST">
+        <input type="text"
+               name="url"
+               placeholder="Enter your URL here..."
+               required>
+    <input type="text"
+               name="image_name"
+               placeholder="Enter your file name here..."
+               required>
+        <button type="submit">Generate QR CODE</button>
+    </form>
+</body>
+</html>
