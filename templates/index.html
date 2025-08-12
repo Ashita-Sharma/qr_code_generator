@@ -18,8 +18,8 @@
         <button type="submit">Generate QR CODE</button>
     </form>
 <h1>Or Read a QR Code</h1>
-<form>
-<input type="file" id="myfile" name="myfile">
+<form action="/reader" method="POST" enctype="multipart/form-data">
+<input type="file" name="code" accept="image/*" required>
     <button type="submit">READ QR CODE</button>
     </form>
 </body>

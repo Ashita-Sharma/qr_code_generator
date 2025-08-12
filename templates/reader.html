@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR code read!</title>
+</head>
+<body>
+<h1> QR code decoded!</h1>
+{% if result.success %}
+<h2>✅ QR Code Successfully Read!</h2>
+<p><strong>Decoded Content:</strong></p>
+<div class="result-text">{{ result.data }}</div>
+{% if result.data.startswith('http') %}
+        <p><a href="{{ result.data }}" target="_blank">🔗 Click to visit this link</a></p>
+        {% endif %}
+{% else %}
+    <div class="error">
+        <h2>❌ Failed to Read QR Code</h2>
+        <p>{{ result.error }}</p>
+    </div>
+    {% endif %}
+ <br>
+    <a href="/"><button>🔄 Try Another</button></a>
+</body>
+</html>
