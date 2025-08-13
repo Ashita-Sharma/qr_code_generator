@@ -2,11 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>QR code generator</title>
+
 </head>
 <body>
-<h1>Welcome to QR Code Generator</h1>
-<form action="/qrcode" method="POST">
+<div class="container mt-5"></div>
+<div class="p-3 mb-2 bg-info text-dark">
+    <h1>Welcome to QR Code Generator</h1></div>
+<div class="d-inline-flex p-2"><form action="/qrcode" method="POST">
         <input type="text"
                name="url"
                placeholder="Enter your URL here..."
@@ -15,12 +21,15 @@
                name="image_name"
                placeholder="Enter your file name here..."
                required>
-        <button type="submit">Generate QR CODE</button>
-    </form>
-<h1>Or Read a QR Code</h1>
+        <button type="button" class="btn btn-primary">Generate QR CODE</button>
+</form></div>
+<div class="p-3 mb-2 bg-info text-dark">
+    <h1>Or Read a QR Code</h1></div>
+<div class="d-inline-flex p-2">
 <form action="/reader" method="POST" enctype="multipart/form-data">
 <input type="file" name="code" accept="image/*" required>
-    <button type="submit">READ QR CODE</button>
-    </form>
+    <button type="submit" class="btn btn-primary">READ QR CODE</button>
+</form></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
