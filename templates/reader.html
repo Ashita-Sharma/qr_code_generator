@@ -7,13 +7,10 @@
     <title>QR code read!</title>
 </head>
 <body>
-<div class="p-3 mb-2 bg-info text-dark">
+<div class="p-3 mb-2 bg-success text-white">
     <h1> QR code decoded!</h1></div>
 {% if result.success %}
-<div class="p-3 mb-2 bg-info text-dark"><h2>✅ QR Code Successfully Read!</h2></div>
         <p><strong>Decoded Content:</strong></p>
-        <div class="result-text">{{ result.data }}</div>
-
         {% set url = result.data %}
         {% if url.startswith('http://') or url.startswith('https://') %}
             <!-- URL already has protocol -->
